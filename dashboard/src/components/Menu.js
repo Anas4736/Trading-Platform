@@ -25,7 +25,7 @@ const Menu = ({email,user}) => {
 
   return (
     <div className="menu-container">
-      <img src="logo.png" alt="logo" style={{ width: "50px" }} />
+      <img src="https://images.seeklogo.com/logo-png/48/1/zerodha-kite-logo-png_seeklogo-487028.png" alt="logo" style={{ width: "50px" }} />
       <div className="menus">
         <ul>
           <li>

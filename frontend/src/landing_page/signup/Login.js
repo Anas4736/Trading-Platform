@@ -43,7 +43,7 @@ const Login = () => {
       const { success, message } = data;
       if (success) {
         handleSuccess(message);
-        window.location.href = "http://localhost:3001"; // Redirect to dashboard automatically
+        window.location.href = "http://localhost:3000"; // Redirect to dashboard automatically
       } else {
         handleError(message);
       }
