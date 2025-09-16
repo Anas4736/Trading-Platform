@@ -10,7 +10,7 @@ const Login = () => {
     email: "",
     password: "",
   });
-  const [showOptions, setShowOptions] = useState(false); // New state
+  const [showOptions, setShowOptions] = useState(false);
   const { email, password } = inputValue;
 
   const handleOnChange = (e) => {
@@ -30,11 +30,13 @@ const Login = () => {
       position: "bottom-left",
     });
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/login",
+        `${apiUrl}/login`, // Use env variable here
         {
           ...inputValue,
         },
@@ -43,7 +45,7 @@ const Login = () => {
       const { success, message } = data;
       if (success) {
         handleSuccess(message);
-        window.location.href = "http://localhost:3000"; // Redirect to dashboard automatically
+        window.location.href = "https://zerodha-dashboard-cpj3.onrender.com/";
       } else {
         handleError(message);
       }
@@ -58,11 +60,11 @@ const Login = () => {
   };
 
   const handleDashboard = () => {
-    window.location.href = "http://localhost:3001";
+    window.location.href = "https://zerodha-dashboard-cpj3.onrender.com/";
   };
 
   const handleLogout = () => {
-    navigate("/"); // or "/" if your Zerodha frontend is at root
+    navigate("/");
   };
 
   return (

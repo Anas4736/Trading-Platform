@@ -9,7 +9,7 @@ function Hero() {
         <div className="col-1 mt-5"></div>
         <div className="col mt-5">
           <img
-            src="media/images/pricingEquity.svg"
+            src="media/Images/pricingEquity.svg"
             alt="Pricing Equity"
             style={{ height: "75%", width: "75%" }}
           />
@@ -21,7 +21,7 @@ function Hero() {
         </div>
         <div className="col mt-5">
           <img
-            src="media/images/intradayTrades.svg"
+            src="media/Images/intradayTrades.svg"
             alt="intradayTrades"
             style={{ height: "75%", width: "75%" }}
           />
@@ -34,7 +34,7 @@ function Hero() {
         </div>
         <div className="col mt-5">
           <img
-            src="media/images/pricing0.svg"
+            src="media/Images/pricing0.svg"
             alt="Pricing 0"
             style={{ height: "75%", width: "75%" }}
           />

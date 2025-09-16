@@ -17,14 +17,20 @@ const OrderRoute = require("./Routes/Order.js");
 const PORT = process.env.PORT || 3002;
 const Url = process.env.MONGO_URL;
 
-
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"], // your frontend URL
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:3001",
+      "https://zerodha-frontend-n84y.onrender.com", // <-- Add your deployed frontend
+      "https://zerodha-dashboard-cpj3.onrender.com" // <-- Add your deployed dashboard if needed
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+
 
 app.use(cookieParser());
 
@@ -38,6 +44,11 @@ app.use("/", PositionRoute);
 app.use("/", OrderRoute);
 
 app.use(bodyParser.json());
+
+app.get("/", (req, res) => {
+  res.send("Backend is running");
+});
+
 
 app.get("/allHoldings", async (req, res) => {
   let allHoldings = await HoldingsModel.find({});
@@ -68,10 +79,14 @@ app.get("/allOrders", async (req, res) => {
   res.json(allOrders);
 });
 
-app.listen(PORT, () => {
-  console.log("App started!");
-  mongoose.connect(Url, {
-    
+mongoose.connect(Url)
+  .then(() => {
+    console.log("DB connected!");
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error("DB connection failed:", err.message);
   });
-  console.log("DB started!");
-});
+
