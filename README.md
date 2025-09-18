@@ -4,7 +4,7 @@
   <img src="https://imgs.search.brave.com/Z4tYWX1YZJdaGLHdutKfq3cWOsyGChpR8bOPSxe9Zxg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly96ZXJv/ZGhhLmNvbS9zdGF0/aWMvaW1hZ2VzL2xh/bmRpbmcucG5n" alt="Project Preview" width="800" style="border-radius: 12px; box-shadow: 0px 4px 20px rgba(0,0,0,0.3);" />
 </p>
 
-A full-stack stock trading web application inspired by [Zerodha](https://zerodha.com/), allowing users to simulate buying and selling stocks, view portfolio.
+A full-stack stock trading web application allowing users to simulate buying and selling stocks, view portfolio.
 
 > ⚠️ This is an academic project and **does not use real stock market data** or enable actual trading.
 
