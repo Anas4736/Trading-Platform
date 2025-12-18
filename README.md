@@ -1,4 +1,4 @@
-# 💹 Zerodha - Stock Trading Platform    
+# 💹 Zerodha - Stock Trading Platform     
  
 <p align="center">
   <img src="https://imgs.search.brave.com/Z4tYWX1YZJdaGLHdutKfq3cWOsyGChpR8bOPSxe9Zxg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly96ZXJv/ZGhhLmNvbS9zdGF0/aWMvaW1hZ2VzL2xh/bmRpbmcucG5n" 
